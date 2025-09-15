@@ -1,0 +1,9 @@
+﻿global using Domain.Contracts;
+global using Domain.Models;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Persistence.Data;
+global using Persistence.Repositories;
+global using StackExchange.Redis;
+global using System.Text.Json;
