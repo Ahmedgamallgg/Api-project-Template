@@ -1,7 +1,7 @@
 ﻿
 namespace Persistence.Repositories;
-internal class CasheRepository(IConnectionMultiplexer connection)
-    : ICasheRepository
+internal class CacheRepository(IConnectionMultiplexer connection)
+    : ICacheRepository
 {
 
     private readonly IDatabase _database = connection.GetDatabase();

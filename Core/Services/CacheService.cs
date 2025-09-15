@@ -2,8 +2,8 @@
 using System.Text.Json;
 
 namespace Services;
-internal class CasheService(ICasheRepository cashRepository)
-    : ICasheService
+internal class CacheService(ICacheRepository cashRepository)
+    : ICacheService
 {
     public async Task<string?> GetAsync(string cashKey)
         => await cashRepository.GetAsync<string>(cashKey);

@@ -11,7 +11,7 @@ internal class RedisCashAttribute(int durationInSec = 90)
     public override async Task OnActionExecutionAsync(ActionExecutingContext context,
         ActionExecutionDelegate next)
     {
-        var service = context.HttpContext.RequestServices.GetRequiredService<ICasheService>();
+        var service = context.HttpContext.RequestServices.GetRequiredService<ICacheService>();
         string cashKey = CreateCashKey(context.HttpContext.Request);
         var cashValue = await service.GetAsync(cashKey);
         if (cashValue != null)

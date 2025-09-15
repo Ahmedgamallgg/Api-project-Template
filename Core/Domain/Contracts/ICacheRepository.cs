@@ -1,5 +1,5 @@
 ﻿namespace Domain.Contracts;
-public interface ICasheRepository
+public interface ICacheRepository
 {
     Task<TResult> GetAsync<TResult>(string cashKey);
     Task SetAsync(string cashKey, string value, TimeSpan expiration);
